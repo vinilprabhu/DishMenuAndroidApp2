@@ -17,7 +17,10 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".Home" />
-        <activity android:name=".UserDetails"></activity>
+        <activity android:name=".UserDetails" />
+        <activity android:name=".Restaurant" />
+        <activity android:name=".RestaurantDetails" />
+        <activity android:name=".Menus"></activity>
     </application>
 
 </manifest>

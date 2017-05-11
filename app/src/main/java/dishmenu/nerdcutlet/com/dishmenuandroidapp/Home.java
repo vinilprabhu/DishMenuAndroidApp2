@@ -148,7 +148,7 @@ public class Home extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    //startActivity(new Intent(getApplicationContext(), Api.class));
+                    startActivity(new Intent(getApplicationContext(), Restaurant.class));
                 }
             });
         }
