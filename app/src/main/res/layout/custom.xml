@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/index"/>
+
+
+
+
+    <TextView
+        android:id="@+id/customText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/circleView"
+        android:layout_toRightOf="@+id/circleView"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="18dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_toEndOf="@+id/circleView" />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customText2"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/customText1"
+        android:layout_alignLeft="@+id/customText1"
+        android:layout_alignStart="@+id/customText1" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/circleView"
+        android:layout_alignLeft="@+id/circleView"
+        android:layout_marginTop="8dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/customText2"
+        android:layout_alignBottom="@+id/customText2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp" />
+<android.support.design.widget.TextInputLayout
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_toLeftOf="@+id/checkBox"
+    android:id="@+id/quantitylayout"
+
+    >
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+
+        android:ems="10"
+        android:textSize="15dp"
+        android:id="@+id/quantity"
+        android:hint="Qty"
+        android:layout_alignBaseline="@+id/customText2"
+        android:layout_toLeftOf="@+id/checkBox"/>
+
+</android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

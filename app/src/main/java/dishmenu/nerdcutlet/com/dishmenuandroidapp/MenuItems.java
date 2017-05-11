@@ -55,25 +55,6 @@ public class MenuItems extends AppCompatActivity {
 
         mUserId = user.getUid();
 
-//        database.child("order").child(mUserId).child("orders").addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-////                    User user = dataSnapshot.getValue(User.class);
-//
-//                String FirstNameS =(String)dataSnapshot.child("order").getValue();
-//
-//                item=Integer.parseInt(FirstNameS);
-//
-//                Toast.makeText(MenuItems.this,"item no sucessfuk",Toast.LENGTH_LONG).show();
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.w(TAG, "Failed to read value.", databaseError.toException());
-//            }
-//        });
-//
 
 
 
