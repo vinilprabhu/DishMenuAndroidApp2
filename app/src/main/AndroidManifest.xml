@@ -20,7 +20,9 @@
         <activity android:name=".UserDetails" />
         <activity android:name=".Restaurant" />
         <activity android:name=".RestaurantDetails" />
-        <activity android:name=".Menus"></activity>
+        <activity android:name=".Menus" />
+        <activity android:name=".MenuItems" />
+        <activity android:name=".OrderList"></activity>
     </application>
 
 </manifest>
