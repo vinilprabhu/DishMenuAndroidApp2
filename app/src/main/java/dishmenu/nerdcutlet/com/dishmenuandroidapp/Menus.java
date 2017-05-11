@@ -19,6 +19,7 @@ public class Menus extends AppCompatActivity {
     private DatabaseReference database,restdb,selectdb;
     private FirebaseUser user;
 
+
     private ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,7 @@ public class Menus extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected = listView.getItemAtPosition(i).toString();
 
-                Intent intent =   new Intent(getApplicationContext(), AddDishes.class);
+                Intent intent =   new Intent(getApplicationContext(), Recycler_View.class);
                 intent.putExtra("selected",selected);
                 intent.putExtra("menu",j);
                 startActivity(intent);

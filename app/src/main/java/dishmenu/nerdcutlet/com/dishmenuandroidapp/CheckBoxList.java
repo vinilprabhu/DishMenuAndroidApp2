@@ -91,9 +91,9 @@ public class CheckBoxList extends AppCompatActivity {
 
         for(int i=0;i<listselected.size();i++)
         {
+            final int e = !listselected.get(i).Quantity.equals("")?Integer.parseInt(listselected.get(i).Quantity) : 1;
 
-
-            total =total+ Double.parseDouble(listselected.get(i).Price.toString().trim())* Integer.parseInt(listselected.get(i).Quantity);
+            total =total+ Double.parseDouble(listselected.get(i).Price.toString().trim())*e;
            b=total*a;
             c=total+b;
 
@@ -103,9 +103,9 @@ public class CheckBoxList extends AppCompatActivity {
         TextView sum =(TextView)findViewById(R.id.sum);
         sum.setText("   Total: "+total);
         TextView tax =(TextView)findViewById(R.id.tax);
-        tax.setText("Service tax: 6%");
+        tax.setText("   Service tax: 6%");
         TextView t =(TextView)findViewById(R.id.total);
-        t.setText("Grand Total: "+c);
+        t.setText("   Grand Total: "+c);
 
 
     }

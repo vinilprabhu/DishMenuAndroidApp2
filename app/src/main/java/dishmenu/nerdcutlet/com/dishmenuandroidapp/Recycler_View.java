@@ -39,7 +39,7 @@ pu        this.mDatabase = mDatabase;
     private EditText Quantity;
 
 
-     Button but ;
+     Button but,add ;
     String j,k;
 
     @Override
@@ -55,6 +55,7 @@ pu        this.mDatabase = mDatabase;
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         but=(Button)findViewById(R.id.submit);
+        add=(Button)findViewById(R.id.add);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
 
@@ -65,7 +66,7 @@ pu        this.mDatabase = mDatabase;
 
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        dishes = mDatabase.child("menuitem").child("McDonalds").child("Drinks");
+        dishes = mDatabase.child("menuitem").child(j).child(k);
 
 
         /*recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
@@ -152,6 +153,15 @@ pu        this.mDatabase = mDatabase;
 
 
             }});
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =   new Intent(getApplicationContext(), AddDishes.class);
+                intent.putExtra("selected",k);
+                intent.putExtra("menu",j);
+                startActivity(intent);
+            }
+        });
 
 
 

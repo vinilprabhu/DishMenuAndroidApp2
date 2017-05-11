@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#14FFEC"
 
     android:weightSum="1">
 
@@ -11,11 +12,11 @@
         android:id="@+id/checkText1"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true"
 
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/colorAccent"
+        android:textColor="#212121"
          />
 
 
@@ -25,17 +26,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/checkText3"
         android:textSize="14sp"
-        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true"
+        android:textColor="#212121"
         android:layout_marginLeft="40dp"
-android:hint="1"
+        android:hint="1"
         android:layout_toRightOf="@+id/checkText1"/>
 
     <TextView
         android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:id="@+id/checkText2"
+        android:textColor="#212121"
         android:textSize="14sp"
-        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="50dp"
 
         android:layout_toRightOf="@+id/checkText3"
@@ -47,8 +50,10 @@ android:hint="1"
         app:srcCompat="@android:drawable/ic_menu_delete"
         android:id="@+id/delete"
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:background="#14FFEC"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
