@@ -7,10 +7,13 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import dishmenu.nerdcutlet.com.dishmenuandroidapp.Model.dishes;
 import dishmenu.nerdcutlet.com.dishmenuandroidapp.R;
@@ -27,12 +30,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
     private List<dishes> dishList;
     
     private CheckBox checkbox;
+    private EditText Quantity;
 
 
     public Adapter(View view) {
         super();
         //Name = (TextView) view.findViewById(R.id.customText1);
         checkbox = (CheckBox) view.findViewById(R.id.checkBox);
+        Quantity=(EditText)view.findViewById(R.id.quantity);
+
+        Quantity.setText("1");
     }
 
     public Adapter(List<dishes> dishList) {
@@ -98,7 +105,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
 
                  Recycler_View.listselected.add(dish);
                  dish.isselected=true;
-                 holder.quantityLayout.setVisibility(View.VISIBLE);
+
 
 
 
@@ -136,6 +143,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
         public EditText Quantity;
         public CheckBox checkbox;
         public TextInputLayout quantityLayout;
+        public ImageButton plus,minus;
+
+        int count = 0;
 
         public MyView(View view){
             super(view);
@@ -144,12 +154,44 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
             Name = (TextView) view.findViewById(R.id.customText1);
             Price = (TextView) view.findViewById(R.id.customText2);
             Quantity=(EditText) view.findViewById(R.id.quantity) ;
-            quantityLayout=(TextInputLayout) view.findViewById(R.id.quantitylayout);
             checkbox=(CheckBox) view.findViewById(R.id.checkBox);
+            plus=(ImageButton) view.findViewById(R.id.imageButton2);
+            minus=(ImageButton)view.findViewById(R.id.imageButton);
 
 
+            Quantity.setText("" + count);
+
+            plus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count = count + 1 ;
+                    Quantity.setText("" + count);
+                }
+            });
+            minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(count == 0){
+                        count = 1;
+
+                        Quantity.setText("" + count);
+
+                    }
+                    else if(count ==0){
+                        Quantity.setText("" + count);
+
+                    }
+                    else{
+                        count = count -1;
+                        Quantity.setText("" + count);
+
+                    }
+                }
+            });
 
         }
+
+
 
     }
 

@@ -3,6 +3,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -53,38 +54,50 @@
         android:layout_below="@+id/circleView"
         android:layout_alignLeft="@+id/circleView"
         android:layout_marginTop="8dp"
-        />
+        android:id="@+id/view" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignBaseline="@+id/customText2"
-        android:layout_alignBottom="@+id/customText2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="23dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="23dp" />
-<android.support.design.widget.TextInputLayout
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:layout_toLeftOf="@+id/checkBox"
-    android:id="@+id/quantitylayout"
-
-    >
-    <EditText
         android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
 
+
+
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/minus"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/quantity"
+        android:background="#00ffffff" />
+
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/imageButton2"
+        android:layout_centerVertical="true"
+        android:src="@drawable/plus"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/checkBox"
+        android:layout_toStartOf="@+id/checkBox"
+        android:background="#00ffffff" />
+
+    <EditText
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:textSize="15dp"
         android:id="@+id/quantity"
-        android:hint="Qty"
-        android:layout_alignBaseline="@+id/customText2"
-        android:layout_toLeftOf="@+id/checkBox"/>
-
-</android.support.design.widget.TextInputLayout>
+        android:layout_toLeftOf="@id/imageButton2"
+        android:text="1"
+        android:hint="1"
+        android:layout_alignBottom="@+id/imageButton"/>
 
 </RelativeLayout>

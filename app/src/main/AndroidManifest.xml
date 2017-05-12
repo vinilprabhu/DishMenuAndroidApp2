@@ -23,9 +23,10 @@
         <activity android:name=".Menus" />
         <activity android:name=".MenuItems" />
         <activity android:name=".OrderList" />
-        <activity android:name=".AddDishes"/>
+        <activity android:name=".AddDishes" />
         <activity android:name=".Recycler_View" />
-        <activity android:name=".CheckBoxList"></activity>
+        <activity android:name=".CheckBoxList" />
+        <activity android:name=".ConfirmOrder"></activity>
     </application>
 
 </manifest>

@@ -67,7 +67,7 @@ public class AddDishes extends AppCompatActivity {
                 String name = addName.getText().toString().trim();
                 String price = addPrice.getText().toString().trim();
                 String userId=dish.push().getKey();
-                dishes briyani = new dishes (name,price,"0");
+                dishes briyani = new dishes (name,price,"1");
 
                 dish.child(userId).setValue(briyani);
                 Toast.makeText(AddDishes.this,"dish added",Toast.LENGTH_SHORT).show();

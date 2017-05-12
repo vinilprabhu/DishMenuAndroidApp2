@@ -13,7 +13,6 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:id="@+id/select"
-            android:layout_above="@+id/sum"
             android:layout_alignParentTop="true">
         </android.support.v7.widget.RecyclerView>
 
@@ -23,7 +22,7 @@
             android:layout_width="match_parent"
             android:textColor="#14FFEC"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/tax"
+            android:layout_below="@+id/select"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
         <TextView
@@ -31,7 +30,7 @@
             android:textColor="#14FFEC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/total"
+            android:layout_below="@+id/sum"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
     <TextView
@@ -39,20 +38,31 @@
         android:textColor="#14FFEC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/calculate"
+        android:layout_below="@+id/tax"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
 
     <Button
         android:id="@+id/calculate"
-        android:text="Bill"
+        android:text="Total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#0D7377"
         android:textColor="#14FFEC"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/total"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Order"
+        android:id="@+id/confirmOrder"
+        android:background="#0D7377"
+        android:textColor="#14FFEC"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp" />
 
 </RelativeLayout>
